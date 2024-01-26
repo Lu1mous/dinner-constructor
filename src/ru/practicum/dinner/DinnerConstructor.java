@@ -25,12 +25,7 @@ public class DinnerConstructor {
     }
 
     boolean checkType(String currentTypeDish){
-        boolean isAlreadyType = false;
-        ArrayList<String> dishes = menuByTypeDish.get(currentTypeDish);
-        if(dishes == null){
-            isAlreadyType = true;
-        }
-        return isAlreadyType;
+        return menuByTypeDish.containsKey(currentTypeDish);
     }
 
     void generateDishCombo(ArrayList<String> structureDishCombo, int numberOFCombos){
