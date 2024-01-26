@@ -26,11 +26,9 @@ public class DinnerConstructor {
 
     boolean checkType(String currentTypeDish){
         boolean isAlreadyType = false;
-        for (String typeDish : menuByTypeDish.keySet()) {
-            if(typeDish.equals(currentTypeDish)){
-                isAlreadyType = true;
-                break;
-            }
+        ArrayList<String> dishes = menuByTypeDish.get(currentTypeDish);
+        if(dishes == null){
+            isAlreadyType = true;
         }
         return isAlreadyType;
     }
